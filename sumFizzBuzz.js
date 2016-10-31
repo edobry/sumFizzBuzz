@@ -1,7 +1,7 @@
 var isMultipleOf = n => x => x % n == 0;
 
 var sumFizzBuzz = (n, intervals) => {
-    var multipleChecks = intervals.map(n => x => x % n == 0);
+    var multipleChecks = intervals.map(isMultipleOf);
     var isMultiple = x => multipleChecks.some(check => check(x));
     var total = 0;
     for(var i = 1; i < n; i++) {
